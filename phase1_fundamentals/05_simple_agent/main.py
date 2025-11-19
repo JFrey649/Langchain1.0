@@ -145,10 +145,10 @@ def example_3_agent_with_system_prompt():
         model=model,
         tools=[get_weather, calculator],
         system_prompt="""你是一个友好的助手。
-特点：
-- 回答简洁明了
-- 使用工具前先说明
-- 结果用表格或列表清晰展示"""
+            特点：
+            - 回答简洁明了
+            - 使用工具前先说明
+            - 结果用表格或列表清晰展示"""
     )
 
     print("\n测试：自定义行为的 Agent")

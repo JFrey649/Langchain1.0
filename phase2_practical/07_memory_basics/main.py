@@ -286,10 +286,10 @@ def example_6_practical_use():
         model=model,
         tools=[get_user_info],
         system_prompt="""你是一个客服助手。
-特点：
-- 记住用户说过的话
-- 友好、有耐心
-- 使用 get_user_info 工具查询用户信息时需要用户 ID""",
+            特点：
+            - 记住用户说过的话
+            - 友好、有耐心
+            - 使用 get_user_info 工具查询用户信息时需要用户 ID""",
         checkpointer=InMemorySaver()
     )
 
