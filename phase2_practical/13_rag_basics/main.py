@@ -64,21 +64,21 @@ def example_1_document_loaders():
     # 创建示例文本文件
     sample_text = """LangChain 是一个用于构建 LLM 应用的框架。
 
-它提供了以下核心组件：
-1. Models - 语言模型接口
-2. Prompts - 提示词模板
-3. Chains - 链式调用
-4. Agents - 智能代理
-5. Memory - 记忆管理
+        它提供了以下核心组件：
+        1. Models - 语言模型接口
+        2. Prompts - 提示词模板
+        3. Chains - 链式调用
+        4. Agents - 智能代理
+        5. Memory - 记忆管理
 
-LangChain 1.0 引入了重大改进，包括：
-- 更简洁的 API
-- 更好的性能
-- 内置的 LangGraph 支持
-- 强大的中间件系统
+        LangChain 1.0 引入了重大改进，包括：
+        - 更简洁的 API
+        - 更好的性能
+        - 内置的 LangGraph 支持
+        - 强大的中间件系统
 
-RAG (Retrieval-Augmented Generation) 是 LangChain 的核心应用场景之一。
-它结合了检索和生成，让 LLM 能够访问外部知识库。"""
+        RAG (Retrieval-Augmented Generation) 是 LangChain 的核心应用场景之一。
+        它结合了检索和生成，让 LLM 能够访问外部知识库。"""
 
     # 保存到文件
     doc_path = DATA_DIR / "langchain_intro.txt"
@@ -380,10 +380,10 @@ def example_6_rag_qa(vectorstore):
         model=model,
         tools=[search_knowledge_base],
         system_prompt="""你是一个助手，可以访问知识库。
-当用户提问时：
-1. 使用 search_knowledge_base 工具搜索相关信息
-2. 基于搜索结果回答问题
-3. 如果知识库中没有相关信息，诚实告知"""
+            当用户提问时：
+            1. 使用 search_knowledge_base 工具搜索相关信息
+            2. 基于搜索结果回答问题
+            3. 如果知识库中没有相关信息，诚实告知"""
     )
 
     # 测试��答

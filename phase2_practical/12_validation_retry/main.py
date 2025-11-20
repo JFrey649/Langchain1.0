@@ -204,9 +204,8 @@ def example_4_llm_validation_retry():
         try:
             # 调用 LLM
             prompt = f"""从以下文本提取产品信息。
-重要：price 必须是数字类型（不是字符串），stock 必须是整数类型。
-
-文本: {text}"""
+                重要：price 必须是数字类型（不是字符串），stock 必须是整数类型。
+                文本: {text}"""
             result = structured_llm.invoke(prompt)
 
             # 如果到这里，说明验证通过
@@ -357,9 +356,8 @@ def extract_with_validation(text: str, max_retries: int = 3) -> Optional[Extract
         try:
             # 调用 LLM（强调类型）
             prompt = f"""提取以下文本中的信息。
-重要：value 必须是数字类型（float），不能是字符串。
-
-{current_text}"""
+                重要：value 必须是数字类型（float），不能是字符串。
+                {current_text}"""
             result = structured_llm.invoke(prompt)
 
             # 额外的业务验证（Pydantic 已经检查了 gt=0）
@@ -459,9 +457,8 @@ def example_7_combined():
 
     try:
         prompt = """提取以下文本中的信息。
-重要：value 必须是数字类型（float）。
-
-产品 C 的价值是 1299 元"""
+            重要：value 必须是数字类型（float）。
+            产品 C 的价值是 1299 元"""
         result = robust_llm.invoke(prompt)
         print(f"\n✓ 成功提取:")
         print(f"  名称: {result.name}")
